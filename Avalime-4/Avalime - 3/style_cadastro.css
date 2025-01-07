@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #E2DFC4;
+}
+
+#bloco {
+    background-color: #FDFCF3;
+}
+
+button:hover {
+    background-color: #256728;
+}
+
+.form-control{
+    background-color: #D9D9D9;
+}

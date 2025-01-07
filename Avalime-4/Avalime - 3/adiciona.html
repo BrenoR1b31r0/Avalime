@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalime</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         body {
+      background-color: #f5f5f5;
+    }
+    .navbar {
+      background-color: #d7d3b9;
+    }
+        .header {
+            background-color: #e4e0d8;
+            padding: 10px 20px;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .view-more {
+            font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+        }
+        .movie-box {
+            width: 100%;
+            aspect-ratio: 2 / 3; /* Proporção de cartaz de filme */
+            background-color: #90ee90;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="inicial.html">Avalime</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="tela_perfil.html">PERFIL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FILMES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SÉRIES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LISTAS</a>
+              </li>
+              <li id="botao_adicionar" class="nav-item" style="display: none;">
+          <a class="nav-link" href="adiciona.html">ADICIONAR</a>
+        </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="border p-3">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder" class="img-fluid">
+                    <p class="mt-2">Adicionar imagem:</p>
+                    <input type="file" class="form-control mb-3">
+                    <p class="mt-2">Disponível em:</p>
+                    <select class="form-select">
+                        <option value="">Selecione</option>
+                        <option value="netflix">Netflix</option>
+                        <option value="amazon">Amazon Prime</option>
+                        <option value="disney">Disney+</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <form>
+                    <div class="mb-3">
+                        <label for="animationName" class="form-label">Informe o nome da animação</label>
+                        <input type="text" class="form-control" id="animationName" placeholder="Nome da animação">
+                    </div>
+                    <div class="mb-3">
+                        <label for="animationSynopsis" class="form-label">Informe a sinopse</label>
+                        <textarea class="form-control" id="animationSynopsis" rows="5" placeholder="Sinopse da animação"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

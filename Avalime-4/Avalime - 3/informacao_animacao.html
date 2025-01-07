@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalime</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+         body {
+      background-color: #f5f5f5;
+    }
+    .navbar {
+      background-color: #d7d3b9;
+    }
+        .header {
+            background-color: #e4e0d8;
+            padding: 10px 20px;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .view-more {
+            font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+        }
+        .movie-box {
+            width: 100%;
+            aspect-ratio: 2 / 3; /* Proporção de cartaz de filme */
+            background-color: #90ee90;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="inicial.html">Avalime</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="tela_perfil.html">PERFIL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FILMES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SÉRIES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LISTAS</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-md-3 text-center">
+                <div class="bg-success mb-3" style="width: 100%; height: 400px;"></div>
+                <p>Disponível em:</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <div class="rounded-icon"></div>
+                    <div class="rounded-icon"></div>
+                    <div class="rounded-icon"></div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <h3>Nome da animação</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis 
+                    condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus 
+                    et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, 
+                    posuere eu, lectus. muito texto que tirei da internet
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <div class="border p-3">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div><i class="bi bi-eye"></i> Visto</div>
+                        <div><i class="bi bi-heart"></i> Like</div>
+                    </div>
+                    <div class="mb-3">
+                        <p>Avaliação</p>
+                        <div class="star-rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary w-100 mb-2">Adicionar em uma lista</button>
+                    <button class="btn btn-secondary w-100 mb-2">Adicionar uma review</button>
+                    <button class="btn btn-secondary w-100">Compartilhar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+      const isEditor = localStorage.getItem('isEditor'); 
+  
+      if (isEditor === 'true') {
+         document.getElementById('botao_adicionar').style.display = 'block';
+          
+          const ediçõesTab = new bootstrap.Tab(document.querySelector('a[href="#edições"]'));
+          ediçõesTab.show();
+      }
+  
+      localStorage.removeItem('isEditor'); 
+  });
+      </script>
+</body>
+</html>
